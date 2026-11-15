@@ -17,3 +17,10 @@ spec:
           image: tomcat:latest
           ports:
             - containerPort: 8080
+          volumeMounts:                           # 新增：挂载配置
+            - name: root-page
+              mountPath: /usr/local/tomcat/webapps/ROOT  # 挂载到 Tomcat 的 ROOT 目录
+      volumes:                                    # 新增：定义卷
+        - name: root-page
+          configMap:
+            name: tomcat-root-page                # 关联上面创建的 ConfigMap
