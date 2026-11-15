@@ -7,6 +7,7 @@ data:
     <!DOCTYPE html>
     <html>
     <head>
+      <meta charset="UTF-8">  <!-- 🌟 就是这一行，强制浏览器使用 UTF-8 解析 -->
       <title>ArgoCD Tomcat Test</title>
       <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
